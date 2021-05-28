@@ -6,6 +6,10 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
+  tls:
+    - hosts:
+        - www.whatsnow.xyz
+      secretName: whatsnow-tls
   rules:
     - host: www.whatsnow.xyz
       http:
