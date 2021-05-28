@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: whatsnow
+  namespace: default
+spec:
+  dnsNames:
+    - www.whatsnow.xyz
+  secretName: whatsnow-tls
+  issuerRef:
+    name: letsencrypt-cluster-issuer
+    kind: ClusterIssuer
