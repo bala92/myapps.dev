@@ -8,6 +8,7 @@ export default ({ req }) => {
     //base url <service-name>.<namespace>.svc.cluster.local
     return axios.create({
       baseURL:
+        "www.whatsnow.xyz" ||
         "http://ingress-nginx-controller.ingress-nginx.svc.cluster.local",
       headers: req.headers,
     });
